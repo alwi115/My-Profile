@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>   
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>علوي السقاف | الصفحة الشخصية</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">        
+        <style>
+            * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            }
+
+            body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(to bottom right, #0360BE, #03274b);
+            min-height: 100vh; /* عشان يغطي طول الشاشة كامل */
+            margin: 0; /* نلغي الهوامش الافتراضية */
+            color: #333;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            transition: background 0.3s, color 0.3s;
+            }
+
+            body.dark {
+            background: #121212;
+            color: #eee;
+            }
+
+            .photo {
+                width: 200px;
+                height: 200px;
+                display: flex;
+                overflow: hidden;
+                border-radius: 50%; /* شكل الدائرة */
+                display: inline-block;
+                justify-content: center; /* لمحاذاة أفقياً */
+            }
+
+            .photo img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* يملأ الحاوية ويقطع الزوايا */
+                justify-content: center; /* لمحاذاة أفقياً */
+            }
+
+            header h1{
+                font-size: 40px;
+                color: white;
+                justify-content: center; /* لمحاذاة أفقياً */
+                font-family: "Cairo", sans-serif;
+                font-optical-sizing: auto;
+                font-style: normal;
+                font-variation-settings:
+                "slnt" 0;
+            }
+
+            header p {
+                font-size: 18px;
+                color: #C9D5E5;
+            }
+
+            section{
+            width: 90%;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(to bottom right, #3869B9, #022660);
+            border-radius: 80px;
+            justify-content: center; /* لمحاذاة أفقياً */
+            margin-top: 50px;
+            box-shadow: -12 12px 25px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease; /* سلاسة التأثير */
+            }
+
+            section:hover{
+            transform: scale(1.1); /* تكبير العنصر بنسبة 110% */
+            cursor: pointer; /* تغير شكل المؤشر لما يمر فوق العنصر */  
+            }
+
+            h2{
+            font-size: 40;
+            color: white;
+            }
+
+            ul li {
+            padding-right: 15px;
+            position: relative;
+            margin-right: 10%;
+            }
+
+            section li{
+                font-size: 17px;
+                color: #C9D5E5;
+                margin-top: 10px;
+            }
+
+            hr {
+            border: none;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.03); /* نصف شفاف */
+            margin-top: 2px;
+            }
+
+            .Connection {
+            width: 90%;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(to bottom right, #3869B9, #022660);
+            border-radius: 80px;
+            justify-content: center; /* لمحاذاة أفقياً */
+            margin-top: 50px;
+            box-shadow: -12 12px 25px rgba(0, 0, 0, 0.5);
+            flex-wrap: wrap; /* يخلي العناصر تنزل تحت لما تضيق الشاشة */
+            transition: transform 0.3s ease; /* سلاسة التأثير */
+            }
+
+            .Connection:hover{
+            transform: scale(1.05); /* تكبير العنصر بنسبة 110% */
+            cursor: pointer; /* تغير شكل المؤشر لما يمر فوق العنصر */
+            }
+
+            .Connection3{
+                margin-right: 5%;
+                flex: 1 1 300px; /* العنصر يأخذ عرض لا يقل عن 300px، ويكسر تحت إذا صغرت الشاشة */
+            }
+
+            table {
+            border-spacing: 20px 10px; /* 20px أفقية، 10px عمودية */
+            }
+
+
+            .Connection1{
+            font-size: 10px;
+            color: white;
+            }
+
+            .Connection2{
+                width: 20px;
+                height: 20px;
+            }
+
+            .number{
+                font-size: 20px;
+                color: #C9D5E5;
+                text-decoration: none;
+                transition: transform 0.3s ease; /* سلاسة التأثير */
+            }
+
+            .number:hover{
+            transform: scale(1.1); /* تكبير العنصر بنسبة 110% */
+            cursor: pointer; /* تغير شكل المؤشر لما يمر فوق العنصر */
+            }
+
+            .text{
+            font-size: 20px;
+            color: white;
+            margin-top: -140px;
+            }
+
+            .social{
+                margin-right: 55%;
+                flex: 1 1 300px;         /* كل عنصر يكون على الأقل 300px، وإذا ما فيه مكان ينزل */
+            }
+
+            .social-media {
+            width: 7vw;                   /* حجم الدائرة كنسبة من عرض الشاشة */
+            height: 7vw;
+            max-width: 40px;               /* حد أقصى للحجم على الشاشات الكبيرة */
+            max-height: 40px;
+            border-radius: 50%;
+            background-color: #eeeeee86;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            overflow: hidden; /* يمنع الصورة من الخروج من الدائرة */
+            transition: transform 0.3s ease; /* سلاسة التأثير */
+            }
+
+            .social-media:hover{
+            transform: scale(1.1); /* تكبير العنصر بنسبة 110% */
+            cursor: pointer; /* تغير شكل المؤشر لما يمر فوق العنصر */
+            }
+
+            .social-media1 {
+            width: 7vw;                   /* حجم الدائرة كنسبة من عرض الشاشة */
+            height: 7vw;
+            max-width: 40px;               /* حد أقصى للحجم على الشاشات الكبيرة */
+            max-height: 40px;
+            border-radius: 50%;
+            background-color: #eeeeee86;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            margin-right: 50px;
+            margin-top: -40;
+            overflow: hidden; /* يمنع الصورة من الخروج من الدائرة */
+            transition: transform 0.3s ease; /* سلاسة التأثير */
+            }
+
+            .social-media1:hover{
+            transform: scale(1.1); /* تكبير العنصر بنسبة 110% */
+            cursor: pointer; /* تغير شكل المؤشر لما يمر فوق العنصر */
+            }
+
+            .social-media2 {
+            width: 7vw;                   /* حجم الدائرة كنسبة من عرض الشاشة */
+            height: 7vw;
+            max-width: 40px;               /* حد أقصى للحجم على الشاشات الكبيرة */
+            max-height: 40px;
+            border-radius: 50%;
+            background-color: #eeeeee86;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            margin-right: 110px;
+            margin-top: -40px;
+            overflow: hidden; /* يمنع الصورة من الخروج من الدائرة */
+            transition: transform 0.3s ease; /* سلاسة التأثير */
+            }
+
+            .social-media2:hover{
+            transform: scale(1.1); /* تكبير العنصر بنسبة 110% */
+            cursor: pointer; /* تغير شكل المؤشر لما يمر فوق العنصر */
+            }
+             
+            .social-photo {
+            max-width: 70%;
+            height: auto;
+            object-fit: cover;
+            position: absolute;    /* حتى نقدر نحركها */
+            top: 5px;             /* عدّل هذه القيم لتحريك الصورة */
+            left: 6px;
+            }
+            
+
+        </style>
+    </head> 
+    <header>
+       <center>
+        <div class="photo">
+            <img src="my photo.jpg" alt="صورة الملف التعريفي">
+        </div>
+        </center>
+        <center>
+        <h1> علــوي عبدالـرحمـن السقـاف </h1>
+        </center>
+        <center>
+        <p> أحب عالم البرمجة والتقنية الحديثة. أستمتع بتعلم لغات البرمجة وتصميم المواقع، وأسعى دائمًا <br>  لتطوير مهاراتي وبناء مشاريع مبتكرة تعبر عن شغفي. أؤمن بأن التعلم المستمر هو مفتاح النجاح، وأسعى للمساهمة في مجتمع التقنية بإبداع وتميز. </p>
+        </center>
+    </header>
+    <body>
+        <section>
+            <center><h2> المهارات </h2></center>
+            <hr>
+            <ul>
+                <li> إجادة استخدام الحاسوب والبرامج المكتبية الأساسية </li>
+                <li> إجراء الحسابات البسيطة وتنظيمها بدقة </li>
+                <li> التعامل مع Microsoft Excel وإنشاء الجداول وإدارتها </li>
+                <li> خبرة أساسية في Microsoft Access وتنفيذ مشروع بسيط </li>
+                <li> إعداد العروض التقديمية باستخدام PowerPoint </li>
+                <li> تصميم فواتير منظمة وبسيطة </li>
+                <li> ونتاج فيديوهات قصيرة باستخدام برامج التحرير </li>
+                <li> مهارات تنظيمية عالية والانتباه للتفاصيل </li>
+                <li> القدرة على العمل ضمن فريق والتواصل الفعّال </li>
+            </ul>
+        </section>
+
+        <section>
+            <center><h2> المشاريع</h2></center>
+            <hr>
+            <ul>
+                <li> موقعي الشخصي </li>
+                <li> متجر الكتروني بسيط </li>
+                <li> مونتاج إعلان ترويجي لشركة محلية </li>
+                <li> تصميم فواتير رسمية لشركة محلية </li>
+            </ul>
+        </section>
+        <div class="Connection">
+            <center><h2> التواصل </h2></center>
+            <hr>
+            <div class="Connection3">
+            <table>
+                <tr>  
+                    <td>
+                        <img src="telephone (3).png" alt="call" class="Connection2">
+                    </td>
+                    <td>
+                        <a href="https://wa.me/96895228703" target="_blank" class="number">+968 9522 8703</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="email (1).png" alt="email" class="Connection2">
+                    </td>
+                    <td>
+                        <a href="mailto:alsgab115@gmail.com?subject=استفسار&body=مرحبًا، لدي سؤال بخصوص..." class="number">alsgab115@gmail.com</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="maps-and-flags.png" alt="maps-and-flags" class="Connection2">
+                    </td>
+                    <td>
+                        <p class="number"> سلطنة عمان, ظفار, صلالة </p>
+                    </td>
+                </tr>
+            </table>
+            </div>
+            <div class="social">
+                <h2 class="text"> برامج التوصل الاجتماعي </h2>
+                <table>
+                    <td>     
+                        <div class="social-media">
+                            <center><a href="https://www.instagram.com/alwi_alsggaf/?__pwa=1"><img src="instagram (1).png" alt="instagram" class="social-photo"></a></center>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="social-media">
+                            <center><a href="#"><img src="facebook-circular-logo.png" alt="facebook" class="social-photo"></a></center>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="social-media">
+                                <center><a href="https://x.com/alsggaf18143"><img src="twitter.png" alt="twitter" class="social-photo"></a></center>
+                        </div>  
+                    </td>
+                </table>
+                        <div class="social-media1">
+                            <center><a href="https://github.com/alwi115"><img src="github.png" alt="github" class="social-photo"></a></center>
+                        </div>
+
+                        <div class="social-media2">
+                            <center><a href="#"><img src="linkedin (1).png" alt="linkedin" class="social-photo"></a></center>
+                        </div> 
+            </div>
+        </div>
+    </body>
+
+
+</html>
