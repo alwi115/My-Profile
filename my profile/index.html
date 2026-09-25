@@ -1,347 +1,280 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-    <head>   
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>علوي السقاف | الصفحة الشخصية</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">        
-        <style>
-            * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070b14" />
+  <meta name="description" content="الصفحة الشخصية لعلوي عبدالرحمن السقاف — مهتم بالبرمجة، تصميم الويب وصناعة التجارب الرقمية." />
+  <title>علوي السقاف | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb-one"></span>
+    <span class="orb orb-two"></span>
+    <span class="orb orb-three"></span>
+    <span class="grid"></span>
+  </div>
 
-            body {
-            font-family: 'Cairo', sans-serif;
-            background: linear-gradient(to bottom right, #0360BE, #03274b);
-            min-height: 100vh; /* عشان يغطي طول الشاشة كامل */
-            margin: 0; /* نلغي الهوامش الافتراضية */
-            color: #333;
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-            transition: background 0.3s, color 0.3s;
-            }
+  <header class="site-header" id="top">
+    <nav class="nav shell" aria-label="التنقل الرئيسي">
+      <a class="brand" href="#top" aria-label="العودة إلى البداية">
+        <span class="brand-mark">A</span>
+        <span class="brand-copy">
+          <strong>علوي السقاف</strong>
+          <small>Portfolio</small>
+        </span>
+      </a>
 
-            body.dark {
-            background: #121212;
-            color: #eee;
-            }
+      <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
 
-            .photo {
-                width: 200px;
-                height: 200px;
-                display: flex;
-                overflow: hidden;
-                border-radius: 50%; /* شكل الدائرة */
-                display: inline-block;
-                justify-content: center; /* لمحاذاة أفقياً */
-            }
+      <div class="nav-links" id="nav-links">
+        <a href="#about">نبذة</a>
+        <a href="#skills">المهارات</a>
+        <a href="#projects">المشاريع</a>
+        <a href="#contact">تواصل</a>
+      </div>
 
-            .photo img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover; /* يملأ الحاوية ويقطع الزوايا */
-                justify-content: center; /* لمحاذاة أفقياً */
-            }
+      <a class="nav-cta" href="#contact">خلّنا نتواصل</a>
+    </nav>
+  </header>
 
-            header h1{
-                font-size: 40px;
-                color: white;
-                justify-content: center; /* لمحاذاة أفقياً */
-                font-family: "Cairo", sans-serif;
-                font-optical-sizing: auto;
-                font-style: normal;
-                font-variation-settings:
-                "slnt" 0;
-            }
+  <main>
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> متاح للتعلم وصناعة مشاريع جديدة</div>
+        <p class="hero-kicker">مرحبًا، أنا</p>
+        <h1 id="hero-title">علوي عبدالرحمن <span>السقاف</span></h1>
+        <p class="hero-lead">أحب البرمجة والتقنية الحديثة، وأحوّل الأفكار البسيطة إلى تجارب رقمية مرتبة، واضحة، ولها حضور.</p>
 
-            header p {
-                font-size: 18px;
-                color: #C9D5E5;
-            }
-
-            section{
-            width: 90%;
-            margin-bottom: 30px;
-            padding: 20px;
-            background: linear-gradient(to bottom right, #3869B9, #022660);
-            border-radius: 80px;
-            justify-content: center; /* لمحاذاة أفقياً */
-            margin-top: 50px;
-            box-shadow: -12 12px 25px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease; /* سلاسة التأثير */
-            }
-
-            section:hover{
-            transform: scale(1.1); /* تكبير العنصر بنسبة 110% */
-            cursor: pointer; /* تغير شكل المؤشر لما يمر فوق العنصر */  
-            }
-
-            h2{
-            font-size: 40;
-            color: white;
-            }
-
-            ul li {
-            padding-right: 15px;
-            position: relative;
-            margin-right: 10%;
-            }
-
-            section li{
-                font-size: 17px;
-                color: #C9D5E5;
-                margin-top: 10px;
-            }
-
-            hr {
-            border: none;
-            height: 1px;
-            background-color: rgba(0, 0, 0, 0.03); /* نصف شفاف */
-            margin-top: 2px;
-            }
-
-            .Connection {
-            width: 90%;
-            margin-bottom: 30px;
-            padding: 20px;
-            background: linear-gradient(to bottom right, #3869B9, #022660);
-            border-radius: 80px;
-            justify-content: center; /* لمحاذاة أفقياً */
-            margin-top: 50px;
-            box-shadow: -12 12px 25px rgba(0, 0, 0, 0.5);
-            flex-wrap: wrap; /* يخلي العناصر تنزل تحت لما تضيق الشاشة */
-            transition: transform 0.3s ease; /* سلاسة التأثير */
-            }
-
-            .Connection:hover{
-            transform: scale(1.05); /* تكبير العنصر بنسبة 110% */
-            cursor: pointer; /* تغير شكل المؤشر لما يمر فوق العنصر */
-            }
-
-            .Connection3{
-                margin-right: 5%;
-                flex: 1 1 300px; /* العنصر يأخذ عرض لا يقل عن 300px، ويكسر تحت إذا صغرت الشاشة */
-            }
-
-            table {
-            border-spacing: 20px 10px; /* 20px أفقية، 10px عمودية */
-            }
-
-
-            .Connection1{
-            font-size: 10px;
-            color: white;
-            }
-
-            .Connection2{
-                width: 20px;
-                height: 20px;
-            }
-
-            .number{
-                font-size: 20px;
-                color: #C9D5E5;
-                text-decoration: none;
-                transition: transform 0.3s ease; /* سلاسة التأثير */
-            }
-
-            .number:hover{
-            transform: scale(1.1); /* تكبير العنصر بنسبة 110% */
-            cursor: pointer; /* تغير شكل المؤشر لما يمر فوق العنصر */
-            }
-
-            .text{
-            font-size: 20px;
-            color: white;
-            margin-top: -140px;
-            }
-
-            .social{
-                margin-right: 55%;
-                flex: 1 1 300px;         /* كل عنصر يكون على الأقل 300px، وإذا ما فيه مكان ينزل */
-            }
-
-            .social-media {
-            width: 7vw;                   /* حجم الدائرة كنسبة من عرض الشاشة */
-            height: 7vw;
-            max-width: 40px;               /* حد أقصى للحجم على الشاشات الكبيرة */
-            max-height: 40px;
-            border-radius: 50%;
-            background-color: #eeeeee86;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(10px);
-            overflow: hidden; /* يمنع الصورة من الخروج من الدائرة */
-            transition: transform 0.3s ease; /* سلاسة التأثير */
-            }
-
-            .social-media:hover{
-            transform: scale(1.1); /* تكبير العنصر بنسبة 110% */
-            cursor: pointer; /* تغير شكل المؤشر لما يمر فوق العنصر */
-            }
-
-            .social-media1 {
-            width: 7vw;                   /* حجم الدائرة كنسبة من عرض الشاشة */
-            height: 7vw;
-            max-width: 40px;               /* حد أقصى للحجم على الشاشات الكبيرة */
-            max-height: 40px;
-            border-radius: 50%;
-            background-color: #eeeeee86;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(10px);
-            margin-right: 50px;
-            margin-top: -40;
-            overflow: hidden; /* يمنع الصورة من الخروج من الدائرة */
-            transition: transform 0.3s ease; /* سلاسة التأثير */
-            }
-
-            .social-media1:hover{
-            transform: scale(1.1); /* تكبير العنصر بنسبة 110% */
-            cursor: pointer; /* تغير شكل المؤشر لما يمر فوق العنصر */
-            }
-
-            .social-media2 {
-            width: 7vw;                   /* حجم الدائرة كنسبة من عرض الشاشة */
-            height: 7vw;
-            max-width: 40px;               /* حد أقصى للحجم على الشاشات الكبيرة */
-            max-height: 40px;
-            border-radius: 50%;
-            background-color: #eeeeee86;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(10px);
-            margin-right: 110px;
-            margin-top: -40px;
-            overflow: hidden; /* يمنع الصورة من الخروج من الدائرة */
-            transition: transform 0.3s ease; /* سلاسة التأثير */
-            }
-
-            .social-media2:hover{
-            transform: scale(1.1); /* تكبير العنصر بنسبة 110% */
-            cursor: pointer; /* تغير شكل المؤشر لما يمر فوق العنصر */
-            }
-             
-            .social-photo {
-            max-width: 70%;
-            height: auto;
-            object-fit: cover;
-            position: absolute;    /* حتى نقدر نحركها */
-            top: 5px;             /* عدّل هذه القيم لتحريك الصورة */
-            left: 6px;
-            }
-            
-
-        </style>
-    </head> 
-    <header>
-       <center>
-        <div class="photo">
-            <img src="my photo.jpg" alt="صورة الملف التعريفي">
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">
+            <span>شوف مشاريعي</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#contact">تواصل معي</a>
         </div>
-        </center>
-        <center>
-        <h1> علــوي عبدالـرحمـن السقـاف </h1>
-        </center>
-        <center>
-        <p> أحب عالم البرمجة والتقنية الحديثة. أستمتع بتعلم لغات البرمجة وتصميم المواقع، وأسعى دائمًا <br>  لتطوير مهاراتي وبناء مشاريع مبتكرة تعبر عن شغفي. أؤمن بأن التعلم المستمر هو مفتاح النجاح، وأسعى للمساهمة في مجتمع التقنية بإبداع وتميز. </p>
-        </center>
-    </header>
-    <body>
-        <section>
-            <center><h2> المهارات </h2></center>
-            <hr>
-            <ul>
-                <li> إجادة استخدام الحاسوب والبرامج المكتبية الأساسية </li>
-                <li> إجراء الحسابات البسيطة وتنظيمها بدقة </li>
-                <li> التعامل مع Microsoft Excel وإنشاء الجداول وإدارتها </li>
-                <li> خبرة أساسية في Microsoft Access وتنفيذ مشروع بسيط </li>
-                <li> إعداد العروض التقديمية باستخدام PowerPoint </li>
-                <li> تصميم فواتير منظمة وبسيطة </li>
-                <li> ونتاج فيديوهات قصيرة باستخدام برامج التحرير </li>
-                <li> مهارات تنظيمية عالية والانتباه للتفاصيل </li>
-                <li> القدرة على العمل ضمن فريق والتواصل الفعّال </li>
-            </ul>
-        </section>
 
-        <section>
-            <center><h2> المشاريع</h2></center>
-            <hr>
-            <ul>
-                <li> موقعي الشخصي </li>
-                <li> متجر الكتروني بسيط </li>
-                <li> مونتاج إعلان ترويجي لشركة محلية </li>
-                <li> تصميم فواتير رسمية لشركة محلية </li>
-            </ul>
-        </section>
-        <div class="Connection">
-            <center><h2> التواصل </h2></center>
-            <hr>
-            <div class="Connection3">
-            <table>
-                <tr>  
-                    <td>
-                        <img src="telephone (3).png" alt="call" class="Connection2">
-                    </td>
-                    <td>
-                        <a href="https://wa.me/96895228703" target="_blank" class="number">+968 9522 8703</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="email (1).png" alt="email" class="Connection2">
-                    </td>
-                    <td>
-                        <a href="mailto:alsgab115@gmail.com?subject=استفسار&body=مرحبًا، لدي سؤال بخصوص..." class="number">alsgab115@gmail.com</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="maps-and-flags.png" alt="maps-and-flags" class="Connection2">
-                    </td>
-                    <td>
-                        <p class="number"> سلطنة عمان, ظفار, صلالة </p>
-                    </td>
-                </tr>
-            </table>
-            </div>
-            <div class="social">
-                <h2 class="text"> برامج التوصل الاجتماعي </h2>
-                <table>
-                    <td>     
-                        <div class="social-media">
-                            <center><a href="https://www.instagram.com/alwi_alsggaf/?__pwa=1"><img src="instagram (1).png" alt="instagram" class="social-photo"></a></center>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="social-media">
-                            <center><a href="#"><img src="facebook-circular-logo.png" alt="facebook" class="social-photo"></a></center>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="social-media">
-                                <center><a href="https://x.com/alsggaf18143"><img src="twitter.png" alt="twitter" class="social-photo"></a></center>
-                        </div>  
-                    </td>
-                </table>
-                        <div class="social-media1">
-                            <center><a href="https://github.com/alwi115"><img src="github.png" alt="github" class="social-photo"></a></center>
-                        </div>
-
-                        <div class="social-media2">
-                            <center><a href="#"><img src="linkedin (1).png" alt="linkedin" class="social-photo"></a></center>
-                        </div> 
-            </div>
+        <div class="hero-meta" aria-label="ملخص سريع">
+          <div><strong>04+</strong><span>مشاريع منجزة</span></div>
+          <div><strong>Web</strong><span>اهتمام رئيسي</span></div>
+          <div><strong>∞</strong><span>تعلّم مستمر</span></div>
         </div>
-    </body>
+      </div>
 
+      <div class="hero-visual reveal reveal-delay-1">
+        <div class="visual-glow"></div>
+        <div class="portrait-card spotlight-card">
+          <div class="portrait-topline">
+            <span>ALWI.AS</span>
+            <span class="live-label"><i></i> ONLINE</span>
+          </div>
+          <div class="portrait-wrap">
+            <img src="my photo.jpg" alt="صورة علوي عبدالرحمن السقاف" />
+            <div class="portrait-shade"></div>
+          </div>
+          <div class="portrait-caption">
+            <div><small>التركيز الحالي</small><strong>Web & Technology</strong></div>
+            <span class="arrow-badge">↗</span>
+          </div>
+        </div>
+        <div class="float-chip chip-code">&lt;/&gt; WEB</div>
+        <div class="float-chip chip-create">✦ CREATE</div>
+      </div>
 
+      <a class="scroll-cue" href="#about" aria-label="انزل للقسم التالي"><span></span> اسحب لتحت</a>
+    </section>
+
+    <section class="section shell" id="about">
+      <div class="section-heading reveal">
+        <span class="section-no">01</span>
+        <div>
+          <p>عنّي</p>
+          <h2>شغف بالتقنية، واهتمام بالتفاصيل.</h2>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-main glass-card spotlight-card reveal">
+          <p class="big-copy">أستمتع بتعلّم لغات البرمجة وتصميم المواقع، وأسعى دائمًا لتطوير مهاراتي وبناء مشاريع مبتكرة تعبّر عن شغفي.</p>
+          <div class="quote-line">
+            <span>“</span>
+            <p>أؤمن بأن التعلّم المستمر هو أقصر طريق لبناء شيء أفضل كل مرة.</p>
+          </div>
+        </article>
+
+        <aside class="about-side reveal reveal-delay-1">
+          <div class="mini-card">
+            <span>المجال</span>
+            <strong>تقنية وبرمجة</strong>
+          </div>
+          <div class="mini-card">
+            <span>الاهتمام</span>
+            <strong>تصميم المواقع</strong>
+          </div>
+          <div class="mini-card">
+            <span>الموقع</span>
+            <strong>صلالة، عُمان</strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section shell" id="skills">
+      <div class="section-heading reveal">
+        <span class="section-no">02</span>
+        <div>
+          <p>المهارات</p>
+          <h2>أدوات أستخدمها، ومهارات أبني عليها.</h2>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card spotlight-card reveal">
+          <div class="skill-icon">01</div>
+          <h3>الحاسوب والأعمال المكتبية</h3>
+          <p>استخدام الحاسوب والبرامج المكتبية، وتنظيم البيانات والحسابات اليومية بدقة.</p>
+          <div class="tags"><span>Computer</span><span>Organization</span></div>
+        </article>
+
+        <article class="skill-card spotlight-card reveal reveal-delay-1">
+          <div class="skill-icon">02</div>
+          <h3>Excel و Access</h3>
+          <p>إنشاء الجداول وإدارتها في Excel، مع خبرة أساسية في Access وتنفيذ مشاريع بسيطة.</p>
+          <div class="tags"><span>Excel</span><span>Access</span></div>
+        </article>
+
+        <article class="skill-card spotlight-card reveal reveal-delay-2">
+          <div class="skill-icon">03</div>
+          <h3>العروض والفواتير</h3>
+          <p>إعداد عروض تقديمية مرتبة وتصميم فواتير منظمة وواضحة للاستخدام العملي.</p>
+          <div class="tags"><span>PowerPoint</span><span>Documents</span></div>
+        </article>
+
+        <article class="skill-card spotlight-card reveal">
+          <div class="skill-icon">04</div>
+          <h3>المونتاج وصناعة المحتوى</h3>
+          <p>إنتاج فيديوهات قصيرة وتنسيق المحتوى البصري بأسلوب مناسب للفكرة والجمهور.</p>
+          <div class="tags"><span>Video</span><span>Content</span></div>
+        </article>
+
+        <article class="skill-card spotlight-card reveal reveal-delay-1">
+          <div class="skill-icon">05</div>
+          <h3>التنظيم والدقة</h3>
+          <p>اهتمام بالتفاصيل، تنظيم العمل، وترتيب المهام للوصول لنتيجة أنظف وأوضح.</p>
+          <div class="tags"><span>Focus</span><span>Details</span></div>
+        </article>
+
+        <article class="skill-card spotlight-card reveal reveal-delay-2">
+          <div class="skill-icon">06</div>
+          <h3>العمل الجماعي</h3>
+          <p>القدرة على العمل ضمن فريق والتواصل بوضوح للوصول للنتيجة المطلوبة.</p>
+          <div class="tags"><span>Teamwork</span><span>Communication</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="projects">
+      <div class="section-heading reveal">
+        <span class="section-no">03</span>
+        <div>
+          <p>المشاريع</p>
+          <h2>أعمال نفّذتها وخلّتني أتعلّم أكثر.</h2>
+        </div>
+      </div>
+
+      <div class="projects-list">
+        <article class="project-card project-featured spotlight-card reveal">
+          <div class="project-index">01</div>
+          <div class="project-copy">
+            <span class="project-type">WEB / PERSONAL</span>
+            <h3>الموقع الشخصي</h3>
+            <p>مساحة رقمية شخصية أعرض فيها مهاراتي ومشاريعي ومعلومات التواصل بتجربة حديثة ومتجاوبة.</p>
+          </div>
+          <div class="project-visual pv-one"><span>PORTFOLIO</span><strong>AS.</strong></div>
+        </article>
+
+        <article class="project-card spotlight-card reveal">
+          <div class="project-index">02</div>
+          <div class="project-copy">
+            <span class="project-type">WEB / COMMERCE</span>
+            <h3>متجر إلكتروني بسيط</h3>
+            <p>تجربة أولية لفهم بناء صفحات المنتجات وترتيب المحتوى وتجربة المستخدم.</p>
+          </div>
+          <div class="project-visual pv-two"><span>STORE</span><strong>+</strong></div>
+        </article>
+
+        <article class="project-card spotlight-card reveal">
+          <div class="project-index">03</div>
+          <div class="project-copy">
+            <span class="project-type">VIDEO / MEDIA</span>
+            <h3>إعلان ترويجي</h3>
+            <p>مونتاج إعلان قصير لشركة محلية مع التركيز على إيقاع العرض ووضوح الرسالة.</p>
+          </div>
+          <div class="project-visual pv-three"><span>MOTION</span><strong>▶</strong></div>
+        </article>
+
+        <article class="project-card spotlight-card reveal">
+          <div class="project-index">04</div>
+          <div class="project-copy">
+            <span class="project-type">BUSINESS / DESIGN</span>
+            <h3>فواتير رسمية</h3>
+            <p>تصميم فواتير مرتبة لشركة محلية بأسلوب واضح وسهل للاستخدام اليومي.</p>
+          </div>
+          <div class="project-visual pv-four"><span>INVOICE</span><strong>✓</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell contact-section" id="contact">
+      <div class="contact-panel spotlight-card reveal">
+        <div class="contact-copy">
+          <span class="section-no">04</span>
+          <p class="contact-kicker">تواصل</p>
+          <h2>عندك فكرة؟<br><span>خلّنا نبدأ فيها.</span></h2>
+          <p>تقدر تتواصل معي مباشرة عن طريق الواتساب أو الإيميل، أو تتابعني على حساباتي.</p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="contact-link" href="https://wa.me/96895228703" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">WA</span>
+            <span><small>واتساب</small><strong dir="ltr">+968 9522 8703</strong></span>
+            <b>↗</b>
+          </a>
+          <a class="contact-link" href="mailto:alsgab115@gmail.com?subject=استفسار">
+            <span class="contact-icon">@</span>
+            <span><small>البريد الإلكتروني</small><strong dir="ltr">alsgab115@gmail.com</strong></span>
+            <b>↗</b>
+          </a>
+          <div class="contact-link location-link">
+            <span class="contact-icon">⌖</span>
+            <span><small>الموقع</small><strong>صلالة، ظفار، سلطنة عُمان</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-row reveal">
+        <span>تابعني</span>
+        <div class="social-links">
+          <a href="https://www.instagram.com/alwi_alsggaf/?__pwa=1" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="instagram (1).png" alt="" /> Instagram</a>
+          <a href="https://x.com/alsggaf18143" target="_blank" rel="noopener noreferrer" aria-label="X"><img src="twitter.png" alt="" /> X</a>
+          <a href="https://github.com/alwi115" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="github.png" alt="" /> GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <p>© <span id="year"></span> علوي السقاف. صُممت بعناية.</p>
+    <a href="#top">رجوع للأعلى ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
