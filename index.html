@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-theme="dark">
+
+<html data-theme="dark" dir="rtl" lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#070b14" />
-  <meta name="description" content="الصفحة الشخصية لعلوي عبدالرحمن السقاف — مشاريع برمجية، تصميم واجهات وتجارب رقمية." />
-  <meta name="color-scheme" content="dark light" />
-  <title>علوي السقاف | Portfolio</title>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#070b14" name="theme-color"/>
+<meta content="الصفحة الشخصية لعلوي عبدالرحمن السقاف — مشاريع برمجية، تصميم واجهات وتجارب رقمية." name="description"/>
+<meta content="dark light" name="color-scheme"/>
+<title>علوي السقاف | Portfolio</title>
+<script>
     (() => {
       try {
         const saved = localStorage.getItem('alwi-theme');
@@ -16,402 +17,438 @@
       } catch (_) {}
     })();
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=7.0.0" />
-</head>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&amp;family=Cairo:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css?v=8.0.0" rel="stylesheet">
+</link></head>
 <body>
-  <div class="scroll-progress" aria-hidden="true"></div>
+<noscript><style>.page-loader{display:none!important}</style></noscript>
+<div aria-hidden="true" class="page-loader" id="page-loader">
+<div class="loader-ambient"></div>
+<div class="loader-content">
+<div class="loader-mark"><span>A</span></div>
+<div class="loader-copy"><strong>علوي السقاف</strong><small>PORTFOLIO EXPERIENCE</small></div>
+<div class="loader-track"><i></i></div>
+</div>
+</div>
 
-  <div class="ambient" aria-hidden="true">
-    <span class="orb orb-one"></span>
-    <span class="orb orb-two"></span>
-    <span class="orb orb-three"></span>
-    <span class="grid"></span>
-  </div>
+<div aria-hidden="true" class="scroll-progress"></div>
+<div aria-hidden="true" class="ambient">
+<span class="orb orb-one"></span>
+<span class="orb orb-two"></span>
+<span class="orb orb-three"></span>
+<span class="grid"></span>
 
-  <header class="site-header" id="top">
-    <nav class="nav shell" aria-label="التنقل الرئيسي">
-      <a class="brand" href="#top" aria-label="العودة إلى البداية">
-        <span class="brand-mark">A</span>
-        <span class="brand-copy">
-          <strong>علوي السقاف</strong>
-          <small>PORTFOLIO</small>
-        </span>
-      </a>
+<span class="aurora aurora-one"></span>
+<span class="aurora aurora-two"></span>
+<span class="ambient-line line-one"></span>
+<span class="ambient-line line-two"></span>
+</div>
+<header class="site-header" id="top">
+<nav aria-label="التنقل الرئيسي" class="nav shell">
+<a aria-label="العودة إلى البداية" class="brand" href="#top">
+<span class="brand-mark">A</span>
+<span class="brand-copy">
+<strong>علوي السقاف</strong>
+<small>PORTFOLIO</small>
+</span>
+</a>
+<div class="nav-links" id="nav-links">
+<a href="#about">نبذة</a>
+<a href="#skills">المهارات</a>
+<a href="#projects">المشاريع</a>
+<a href="#now">حاليًا</a>
+<a href="#contact">تواصل</a>
+</div>
+<div class="nav-actions">
+<button aria-label="تغيير إلى الوضع الفاتح" class="theme-toggle" title="تغيير المظهر" type="button">
+<span aria-hidden="true" class="theme-glyph">☀</span>
+<span class="theme-label">فاتح</span>
+</button>
+<a class="nav-cta" href="#contact">خلّنا نتواصل</a>
+<button aria-controls="nav-links" aria-expanded="false" aria-label="فتح القائمة" class="menu-toggle" type="button">
+<span></span><span></span>
+</button>
+</div>
+</nav>
+</header>
+<main>
+<section aria-labelledby="hero-title" class="hero shell">
+<div class="hero-copy reveal reveal-left">
+<div class="eyebrow"><span class="status-dot"></span> أبني وأطوّر مشاريع رقمية حقيقية</div>
+<p class="hero-kicker">مرحبًا، أنا</p>
+<h1 id="hero-title">علوي عبدالرحمن <span>السقاف</span></h1>
+<div aria-label="التخصصات الحالية" class="hero-roles"><span class="role-label">أبني كـ</span><span class="rotating-role" data-roles="Web Developer|UI Designer|Game Creator">Web Developer</span></div>
+<p class="hero-lead">أطوّر منتجات رقمية بهوية واضحة وتجربة استخدام قوية — من الأنظمة والواجهات إلى التطبيقات والألعاب التفاعلية.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#projects">
+<span>استكشف مشاريعي</span>
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+</a>
+<a class="btn btn-ghost" href="#contact">تواصل معي</a>
+</div>
+<div aria-label="ملخص سريع" class="hero-meta">
+<div><strong>03+</strong><span>مشاريع فعلية</span></div>
+<div><strong>02</strong><span>روابط مباشرة</span></div>
+<div><strong>100%</strong><span>Responsive</span></div>
+</div>
+<div class="hero-strip reveal reveal-up">
+<span>واجهة عربية أولًا</span>
+<span>Light / Dark Mode</span>
+<span>Ready for Railway</span>
+</div>
+</div>
+<div class="hero-visual reveal reveal-scale reveal-delay-1">
+<div class="visual-glow"></div>
+<div class="portrait-card spotlight-card">
+<div class="portrait-topline">
+<span>ALWI.AS</span>
+<span class="live-label"><i></i> BUILDING</span>
+</div>
+<div class="portrait-wrap">
+<img alt="صورة علوي عبدالرحمن السقاف" src="my photo.jpg"/>
+<div class="portrait-shade"></div>
+</div>
+<div class="portrait-caption">
+<div><small>التركيز الحالي</small><strong>Web • Apps • Games</strong></div>
+<span class="arrow-badge">↗</span>
+</div>
+</div>
+<div class="float-chip chip-code">&lt;/&gt; BUILD</div>
+<div class="float-chip chip-create">✦ CREATE</div>
+</div>
+<a aria-label="انزل للقسم التالي" class="scroll-cue" href="#about"><span></span> اسحب لتحت</a>
+</section>
+<section aria-labelledby="stats-title" class="stats-section shell reveal reveal-up">
+<div class="stats-heading">
+<span id="stats-title">لمحة سريعة</span>
+<p>أرقام تعطي انطباع سريع عن رحلتي الحالية.</p>
+</div>
+<div class="stats-grid">
+<article class="stat-card spotlight-card">
+<small>مشاريع</small>
+<strong data-count="3">03+</strong>
+<span>مشاريع فعلية اشتغلت عليها من الفكرة للتنفيذ.</span>
+</article>
+<article class="stat-card spotlight-card">
+<small>منصات</small>
+<strong data-count="2">02</strong>
+<span>روابط حية ومشاريع متاحة للتجربة المباشرة.</span>
+</article>
+<article class="stat-card spotlight-card">
+<small>التركيز</small>
+<strong>UI</strong>
+<span>واجهات مرتبة وتجربة استخدام تركز على الإحساس الفخم.</span>
+</article>
+<article class="stat-card spotlight-card">
+<small>الجودة</small>
+<strong>100%</strong>
+<span>تصميم متجاوب ومناسب للجوال والكمبيوتر.</span>
+</article>
+</div>
+</section>
+<section class="section shell" id="about">
+<div class="section-heading reveal reveal-right">
+<span class="section-no">01</span>
+<div>
+<p>عنّي</p>
+<h2>أتعلم بالبناء، وأطوّر الفكرة لين تصير منتج.</h2>
+</div>
+</div>
+<div class="about-grid">
+<article class="about-main glass-card spotlight-card reveal reveal-up">
+<p class="big-copy">أحب أشتغل على مشاريع لها استخدام حقيقي، وأجرّب تقنيات جديدة بدل ما أكتفي بالتعلّم النظري. أكثر شي يشدّني هو تطوير الويب، تصميم الواجهات، الأنظمة، والألعاب.</p>
+<div class="quote-line">
+<span>“</span>
+<p>كل مشروع بالنسبة لي فرصة أتعلم شي جديد وأطلع بنتيجة أحسن من اللي قبلها.</p>
+</div>
+</article>
+<aside class="about-side reveal reveal-right reveal-delay-1">
+<div class="mini-card">
+<span>المجال</span>
+<strong>برمجة وتقنية</strong>
+</div>
+<div class="mini-card">
+<span>التركيز</span>
+<strong>منتجات رقمية</strong>
+</div>
+<div class="mini-card">
+<span>الموقع</span>
+<strong>صلالة، عُمان</strong>
+</div>
+</aside>
+</div>
+</section>
+<section class="section shell" id="skills">
+<div class="section-heading reveal reveal-left">
+<span class="section-no">02</span>
+<div>
+<p>المهارات والتقنيات</p>
+<h2>الأدوات اللي أستخدمها في مشاريعي الحالية.</h2>
+</div>
+</div>
+<div class="skills-grid">
+<article class="skill-card spotlight-card reveal">
+<div class="skill-icon">01</div>
+<h3>تطوير الواجهات</h3>
+<p>بناء واجهات متجاوبة للجوال والكمبيوتر مع اهتمام بالحركة، سهولة الاستخدام والتفاصيل البصرية.</p>
+<div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+</article>
+<article class="skill-card spotlight-card reveal reveal-delay-1">
+<div class="skill-icon">02</div>
+<h3>تطوير الأنظمة</h3>
+<p>بناء منطق الأنظمة والـ APIs وربط الصلاحيات والبيانات والعمليات اليومية داخل المشروع.</p>
+<div class="tags"><span>Node.js</span><span>Express</span><span>REST API</span></div>
+</article>
+<article class="skill-card spotlight-card reveal reveal-delay-2">
+<div class="skill-icon">03</div>
+<h3>قواعد البيانات</h3>
+<p>تصميم وربط البيانات للمشاريع العملية ومتابعة العلاقات والعمليات بشكل منظم.</p>
+<div class="tags"><span>MongoDB</span><span>Mongoose</span><span>Firebase</span></div>
+</article>
+<article class="skill-card spotlight-card reveal">
+<div class="skill-icon">04</div>
+<h3>تطبيقات وألعاب</h3>
+<p>تطوير تجارب تفاعلية ومشاريع موبايل وألعاب، مع اهتمام بالتدفق وسهولة اللعب.</p>
+<div class="tags"><span>Flutter</span><span>Firebase</span><span>UE5</span></div>
+</article>
+<article class="skill-card spotlight-card reveal reveal-delay-1">
+<div class="skill-icon">05</div>
+<h3>UI / UX</h3>
+<p>إعادة تصميم الصفحات، تنظيم المحتوى، وتحسين تجربة المستخدم لتكون أوضح وأفخم.</p>
+<div class="tags"><span>Responsive</span><span>UI</span><span>Motion</span></div>
+</article>
+<article class="skill-card spotlight-card reveal reveal-delay-2">
+<div class="skill-icon">06</div>
+<h3>النشر وإدارة الكود</h3>
+<p>رفع المشاريع وإدارة التحديثات وتجهيزها للنشر على خدمات الاستضافة والبناء.</p>
+<div class="tags"><span>GitHub</span><span>Railway</span><span>Codemagic</span></div>
+</article>
+</div>
+</section>
+<section class="section shell" id="projects">
+<div class="section-heading projects-heading reveal reveal-right">
+<span class="section-no">03</span>
+<div>
+<p>المشاريع الحالية</p>
+<h2>أفكار بدأت من الصفر وصارت مشاريع حقيقية.</h2>
+</div>
+</div>
+<div class="project-summary reveal">
+<span><i class="summary-dot live"></i> مشاريع منشورة</span>
+<span><i class="summary-dot building"></i> ألعاب وتجارب رقمية</span>
+<strong>2026</strong>
+</div>
+<div class="projects-list">
+<article class="project-card project-featured project-darbflow spotlight-card reveal reveal-up">
+<div class="project-index">01</div>
+<div class="project-copy">
+<div class="project-topline">
+<span class="project-type">SAAS / FULL-STACK</span>
+<span class="project-status status-live"><i></i> مباشر</span>
+</div>
+<h3>دَرب فلو <span>DarbFlow</span></h3>
+<p>نظام متكامل لإدارة شركات تأجير السيارات من شاشة واحدة: السيارات، الحجوزات، العقود، المدفوعات، المصروفات، الصيانة، الفروع، التقارير وبوابة العميل.</p>
+<div class="project-tags"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>SaaS</span></div>
+<div class="project-actions">
+<a aria-haspopup="dialog" class="project-link project-link-darbflow" data-project-modal="darbflow" href="#" role="button">
+<span aria-hidden="true" class="project-link-icon"><svg viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></span>
+<span class="project-link-text">فتح موقع DarbFlow</span>
+</a>
+</div>
+</div>
+<div class="project-visual project-logo-visual pv-darbflow">
+<div class="logo-plate logo-plate-light">
+<img alt="شعار DarbFlow" class="project-logo-img darbflow-logo" src="darbflow-logo.png"/>
+</div>
+<div class="visual-meta">
+<span>SMART RENTAL MANAGEMENT</span>
+<small>منصة لإدارة التأجير باحتراف</small>
+</div>
+</div>
+</article>
+<article class="project-card project-game spotlight-card reveal reveal-up">
+<div class="project-index">02</div>
+<div class="project-copy">
+<div class="project-topline">
+<span class="project-type">GAME / WEB &amp; ANDROID</span>
+<span class="project-status status-live"><i></i> مباشر</span>
+</div>
+<h3>من سوّاها؟</h3>
+<p>لعبة اجتماعية خليجية للجلسات والأصدقاء، فيها أنماط لعب مختلفة وتجربة أونلاين وأوفلاين، غرف، تصويت وتفاعل بين اللاعبين.</p>
+<div class="project-tags"><span>Flutter</span><span>Firebase</span><span>Realtime</span><span>Game UI</span></div>
+<div class="project-actions">
+<a aria-haspopup="dialog" class="project-link project-link-game" data-project-modal="mansawwaha" href="#" role="button">
+<span aria-hidden="true" class="project-link-icon"><svg viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></span>
+<span class="project-link-text">العب من سوّاها؟</span>
+</a>
+</div>
+</div>
+<div class="project-visual project-logo-visual pv-game">
+<div class="logo-plate logo-plate-soft">
+<img alt="شعار من سوّاها" class="project-logo-img game-logo" src="man-sawwaha-logo.png"/>
+</div>
+<div class="visual-meta">
+<span>SOCIAL PARTY GAME</span>
+<small>السالفة تبدأ هنا… والضحك عليكم</small>
+</div>
+</div>
+</article>
+<article class="project-card project-portfolio spotlight-card reveal reveal-up">
+<div class="project-index">03</div>
+<div class="project-copy">
+<div class="project-topline">
+<span class="project-type">WEB / PERSONAL BRAND</span>
+<span class="project-status status-live"><i></i> أنت هنا</span>
+</div>
+<h3>الموقع الشخصي</h3>
+<p>مساحتي الرقمية لعرض مشاريعي ومهاراتي. تصميم متجاوب بوضع فاتح وغامق، حركات هادئة وتجربة مناسبة للجوال والكمبيوتر مع عرض واضح للمشاريع الحالية.</p>
+<div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
+<div class="project-actions">
+<a class="project-link project-link-neutral" href="#top">
+<span aria-hidden="true" class="project-link-icon">↑</span>
+<span class="project-link-text">رجوع لأعلى الصفحة</span>
+</a>
+</div>
+</div>
+<div class="project-visual pv-portfolio portfolio-visual">
+<div class="portfolio-window">
+<span class="portfolio-pill">ALWI.AS</span>
+<div class="portfolio-lines">
+<i></i><i></i><i></i>
+</div>
+<strong>AS.</strong>
+<small>Design • Frontend • Identity</small>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="section shell now-section" id="now">
+<div class="section-heading reveal reveal-left">
+<span class="section-no">04</span>
+<div>
+<p>حالياً أعمل على</p>
+<h2>الأشياء اللي أركز عليها الآن في مشاريعي.</h2>
+</div>
+</div>
+<div class="now-grid">
+<article class="now-card spotlight-card reveal reveal-up">
+<div class="now-icon">DF</div>
+<h3>تطوير DarbFlow</h3>
+<p>أحسن التجربة البصرية، وأضيف مزايا أقوى لإدارة شركات تأجير السيارات بشكل عملي واحترافي.</p>
+</article>
+<article class="now-card spotlight-card reveal reveal-up reveal-delay-1">
+<div class="now-icon">؟</div>
+<h3>تحسين من سوّاها؟</h3>
+<p>أطوّر تدفق اللعب، الأونلاين، والتفاعل بين اللاعبين عشان تصير التجربة أمتع وأوضح.</p>
+</article>
+<article class="now-card spotlight-card reveal reveal-up reveal-delay-2">
+<div class="now-icon">UI</div>
+<h3>رفع مستوى الواجهة</h3>
+<p>أشتغل على تفاصيل التصميم، الحركة، والأداء عشان كل مشروع يطلع فخم من أول نظرة.</p>
+</article>
+</div>
+</section>
+<section class="section shell contact-section" id="contact">
+<div class="contact-panel spotlight-card reveal reveal-scale">
+<div class="contact-copy">
+<span class="section-no">05</span>
+<p class="contact-kicker">تواصل</p>
+<h2>عندك فكرة؟<br/><span>خلّنا نبنيها.</span></h2>
+<p>إذا عندك مشروع، فكرة أو تبغى نتكلم عن شي تقني، تقدر تتواصل معي مباشرة.</p>
+</div>
+<div class="contact-actions">
+<a class="contact-link" href="https://wa.me/96890120924" rel="noopener noreferrer" target="_blank">
+<span class="contact-icon">WA</span>
+<span><small>واتساب</small><strong dir="ltr">+968 9012 0924</strong></span>
+<b>↗</b>
+</a>
+<a class="contact-link" href="mailto:alsgab115@gmail.com?subject=استفسار">
+<span class="contact-icon">@</span>
+<span><small>البريد الإلكتروني</small><strong dir="ltr">alsgab115@gmail.com</strong></span>
+<b>↗</b>
+</a>
+<div class="contact-link location-link">
+<span class="contact-icon">⌖</span>
+<span><small>الموقع</small><strong>صلالة، ظفار، سلطنة عُمان</strong></span>
+</div>
+</div>
+</div>
+<div class="social-row reveal reveal-up">
+<span>تابعني</span>
+<div class="social-links">
+<a aria-label="Instagram" href="https://www.instagram.com/alwi_alsggaf/?__pwa=1" rel="noopener noreferrer" target="_blank"><img alt="" src="instagram (1).png"/> Instagram</a>
+<a aria-label="X" href="https://x.com/alsggaf18143" rel="noopener noreferrer" target="_blank"><img alt="" src="twitter.png"/> X</a>
+<a aria-label="GitHub" href="https://github.com/alwi115" rel="noopener noreferrer" target="_blank"><img alt="" src="github.png"/> GitHub</a>
+</div>
+</div>
+</section>
+</main>
 
-      <div class="nav-links" id="nav-links">
-        <a href="#about">نبذة</a>
-        <a href="#skills">المهارات</a>
-        <a href="#projects">المشاريع</a>
-        <a href="#now">حاليًا</a>
-        <a href="#contact">تواصل</a>
-      </div>
+<div aria-hidden="true" class="project-modal" id="project-modal">
+<div class="project-modal-backdrop" data-modal-close=""></div>
+<section aria-labelledby="modal-title" aria-modal="true" class="project-modal-dialog" role="dialog">
+<button aria-label="إغلاق نافذة المشروع" class="modal-close" data-modal-close="" type="button">×</button>
+<div class="modal-brand-panel" id="modal-brand-panel">
+<div class="modal-brand-glow"></div>
+<img alt="" id="modal-logo" src="darbflow-logo.png"/>
+<span id="modal-type">PROJECT</span>
+</div>
+<div class="modal-content">
+<div class="modal-status"><i></i><span>مشروع مباشر</span></div>
+<h2 id="modal-title">اسم المشروع</h2>
+<p id="modal-description"></p>
+<div class="modal-tags" id="modal-tags"></div>
+<div class="modal-actions">
+<a class="modal-primary" href="#" id="modal-open-link" rel="noopener noreferrer" target="_blank">
+<span>فتح المشروع</span><b>↗</b>
+</a>
+<button class="modal-secondary" data-modal-close="" type="button">رجوع</button>
+</div>
+</div>
+</section>
+</div>
 
-      <div class="nav-actions">
-        <button class="theme-toggle" type="button" aria-label="تغيير إلى الوضع الفاتح" title="تغيير المظهر">
-          <span class="theme-glyph" aria-hidden="true">☀</span>
-          <span class="theme-label">فاتح</span>
-        </button>
+<footer class="footer-premium">
+<div class="footer-shell shell">
+<div class="footer-cta-card spotlight-card reveal reveal-up">
+<div class="footer-cta-copy">
+<span class="footer-kicker">NEXT PROJECT</span>
+<h2>فكرة حلوة؟ خلّنا نحولها لشي يشتغل.</h2>
+<p>أنظمة، واجهات، تطبيقات وتجارب رقمية — تواصل معي ونشوف وش نقدر نبني.</p>
+</div>
+<a class="footer-contact-btn" href="https://wa.me/96890120924" rel="noopener noreferrer" target="_blank">
+<span>تواصل واتساب</span><b>↗</b>
+</a>
+</div>
+<div class="footer-bottom">
+<a class="footer-brand" href="#top">
+<span class="footer-brand-mark">A</span>
+<span><strong>علوي السقاف</strong><small>DESIGN • BUILD • SHIP</small></span>
+</a>
+<nav aria-label="روابط الفوتر" class="footer-nav">
+<a href="#about">نبذة</a>
+<a href="#projects">المشاريع</a>
+<a href="#now">حاليًا</a>
+<a href="#contact">تواصل</a>
+</nav>
+<button aria-label="الرجوع لأعلى الصفحة" class="back-top" id="back-top" type="button">
+<span>للأعلى</span><b>↑</b>
+</button>
+</div>
+<div class="footer-legal">
+<p>© <span id="year"></span> علوي السقاف. صُمم وطُوّر بعناية.</p>
+<div class="footer-socials">
+<a href="https://www.instagram.com/alwi_alsggaf/?__pwa=1" rel="noopener noreferrer" target="_blank">Instagram</a>
+<a href="https://x.com/alsggaf18143" rel="noopener noreferrer" target="_blank">X</a>
+<a href="https://github.com/alwi115" rel="noopener noreferrer" target="_blank">GitHub</a>
+</div>
+</div>
+</div>
+</footer>
 
-        <a class="nav-cta" href="#contact">خلّنا نتواصل</a>
-
-        <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-links">
-          <span></span><span></span>
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero shell" aria-labelledby="hero-title">
-      <div class="hero-copy reveal reveal-left">
-        <div class="eyebrow"><span class="status-dot"></span> أبني وأطوّر مشاريع رقمية حقيقية</div>
-        <p class="hero-kicker">مرحبًا، أنا</p>
-        <h1 id="hero-title">علوي عبدالرحمن <span>السقاف</span></h1>
-        <div class="hero-roles" aria-label="التخصصات الحالية"><span class="role-label">أبني كـ</span><span class="rotating-role" data-roles="Web Developer|UI Designer|Game Creator">Web Developer</span></div>
-        <p class="hero-lead">أطوّر منتجات رقمية بهوية واضحة وتجربة استخدام قوية — من الأنظمة والواجهات إلى التطبيقات والألعاب التفاعلية.</p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">
-            <span>استكشف مشاريعي</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="btn btn-ghost" href="#contact">تواصل معي</a>
-        </div>
-
-        <div class="hero-meta" aria-label="ملخص سريع">
-          <div><strong>03+</strong><span>مشاريع فعلية</span></div>
-          <div><strong>02</strong><span>روابط مباشرة</span></div>
-          <div><strong>100%</strong><span>Responsive</span></div>
-        </div>
-
-        <div class="hero-strip reveal reveal-up">
-          <span>واجهة عربية أولًا</span>
-          <span>Light / Dark Mode</span>
-          <span>Ready for Railway</span>
-        </div>
-      </div>
-
-      <div class="hero-visual reveal reveal-scale reveal-delay-1">
-        <div class="visual-glow"></div>
-        <div class="portrait-card spotlight-card">
-          <div class="portrait-topline">
-            <span>ALWI.AS</span>
-            <span class="live-label"><i></i> BUILDING</span>
-          </div>
-          <div class="portrait-wrap">
-            <img src="my photo.jpg" alt="صورة علوي عبدالرحمن السقاف" />
-            <div class="portrait-shade"></div>
-          </div>
-          <div class="portrait-caption">
-            <div><small>التركيز الحالي</small><strong>Web • Apps • Games</strong></div>
-            <span class="arrow-badge">↗</span>
-          </div>
-        </div>
-        <div class="float-chip chip-code">&lt;/&gt; BUILD</div>
-        <div class="float-chip chip-create">✦ CREATE</div>
-      </div>
-
-      <a class="scroll-cue" href="#about" aria-label="انزل للقسم التالي"><span></span> اسحب لتحت</a>
-    </section>
-
-    <section class="stats-section shell reveal reveal-up" aria-labelledby="stats-title">
-      <div class="stats-heading">
-        <span id="stats-title">لمحة سريعة</span>
-        <p>أرقام تعطي انطباع سريع عن رحلتي الحالية.</p>
-      </div>
-      <div class="stats-grid">
-        <article class="stat-card spotlight-card">
-          <small>مشاريع</small>
-          <strong data-count="3">03+</strong>
-          <span>مشاريع فعلية اشتغلت عليها من الفكرة للتنفيذ.</span>
-        </article>
-        <article class="stat-card spotlight-card">
-          <small>منصات</small>
-          <strong data-count="2">02</strong>
-          <span>روابط حية ومشاريع متاحة للتجربة المباشرة.</span>
-        </article>
-        <article class="stat-card spotlight-card">
-          <small>التركيز</small>
-          <strong>UI</strong>
-          <span>واجهات مرتبة وتجربة استخدام تركز على الإحساس الفخم.</span>
-        </article>
-        <article class="stat-card spotlight-card">
-          <small>الجودة</small>
-          <strong>100%</strong>
-          <span>تصميم متجاوب ومناسب للجوال والكمبيوتر.</span>
-        </article>
-      </div>
-    </section>
-
-    <section class="section shell" id="about">
-      <div class="section-heading reveal reveal-right">
-        <span class="section-no">01</span>
-        <div>
-          <p>عنّي</p>
-          <h2>أتعلم بالبناء، وأطوّر الفكرة لين تصير منتج.</h2>
-        </div>
-      </div>
-
-      <div class="about-grid">
-        <article class="about-main glass-card spotlight-card reveal reveal-up">
-          <p class="big-copy">أحب أشتغل على مشاريع لها استخدام حقيقي، وأجرّب تقنيات جديدة بدل ما أكتفي بالتعلّم النظري. أكثر شي يشدّني هو تطوير الويب، تصميم الواجهات، الأنظمة، والألعاب.</p>
-          <div class="quote-line">
-            <span>“</span>
-            <p>كل مشروع بالنسبة لي فرصة أتعلم شي جديد وأطلع بنتيجة أحسن من اللي قبلها.</p>
-          </div>
-        </article>
-
-        <aside class="about-side reveal reveal-right reveal-delay-1">
-          <div class="mini-card">
-            <span>المجال</span>
-            <strong>برمجة وتقنية</strong>
-          </div>
-          <div class="mini-card">
-            <span>التركيز</span>
-            <strong>منتجات رقمية</strong>
-          </div>
-          <div class="mini-card">
-            <span>الموقع</span>
-            <strong>صلالة، عُمان</strong>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section shell" id="skills">
-      <div class="section-heading reveal reveal-left">
-        <span class="section-no">02</span>
-        <div>
-          <p>المهارات والتقنيات</p>
-          <h2>الأدوات اللي أستخدمها في مشاريعي الحالية.</h2>
-        </div>
-      </div>
-
-      <div class="skills-grid">
-        <article class="skill-card spotlight-card reveal">
-          <div class="skill-icon">01</div>
-          <h3>تطوير الواجهات</h3>
-          <p>بناء واجهات متجاوبة للجوال والكمبيوتر مع اهتمام بالحركة، سهولة الاستخدام والتفاصيل البصرية.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-        </article>
-
-        <article class="skill-card spotlight-card reveal reveal-delay-1">
-          <div class="skill-icon">02</div>
-          <h3>تطوير الأنظمة</h3>
-          <p>بناء منطق الأنظمة والـ APIs وربط الصلاحيات والبيانات والعمليات اليومية داخل المشروع.</p>
-          <div class="tags"><span>Node.js</span><span>Express</span><span>REST API</span></div>
-        </article>
-
-        <article class="skill-card spotlight-card reveal reveal-delay-2">
-          <div class="skill-icon">03</div>
-          <h3>قواعد البيانات</h3>
-          <p>تصميم وربط البيانات للمشاريع العملية ومتابعة العلاقات والعمليات بشكل منظم.</p>
-          <div class="tags"><span>MongoDB</span><span>Mongoose</span><span>Firebase</span></div>
-        </article>
-
-        <article class="skill-card spotlight-card reveal">
-          <div class="skill-icon">04</div>
-          <h3>تطبيقات وألعاب</h3>
-          <p>تطوير تجارب تفاعلية ومشاريع موبايل وألعاب، مع اهتمام بالتدفق وسهولة اللعب.</p>
-          <div class="tags"><span>Flutter</span><span>Firebase</span><span>UE5</span></div>
-        </article>
-
-        <article class="skill-card spotlight-card reveal reveal-delay-1">
-          <div class="skill-icon">05</div>
-          <h3>UI / UX</h3>
-          <p>إعادة تصميم الصفحات، تنظيم المحتوى، وتحسين تجربة المستخدم لتكون أوضح وأفخم.</p>
-          <div class="tags"><span>Responsive</span><span>UI</span><span>Motion</span></div>
-        </article>
-
-        <article class="skill-card spotlight-card reveal reveal-delay-2">
-          <div class="skill-icon">06</div>
-          <h3>النشر وإدارة الكود</h3>
-          <p>رفع المشاريع وإدارة التحديثات وتجهيزها للنشر على خدمات الاستضافة والبناء.</p>
-          <div class="tags"><span>GitHub</span><span>Railway</span><span>Codemagic</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section shell" id="projects">
-      <div class="section-heading projects-heading reveal reveal-right">
-        <span class="section-no">03</span>
-        <div>
-          <p>المشاريع الحالية</p>
-          <h2>أفكار بدأت من الصفر وصارت مشاريع حقيقية.</h2>
-        </div>
-      </div>
-
-      <div class="project-summary reveal">
-        <span><i class="summary-dot live"></i> مشاريع منشورة</span>
-        <span><i class="summary-dot building"></i> ألعاب وتجارب رقمية</span>
-        <strong>2026</strong>
-      </div>
-
-      <div class="projects-list">
-        <article class="project-card project-featured project-darbflow spotlight-card reveal reveal-up">
-          <div class="project-index">01</div>
-          <div class="project-copy">
-            <div class="project-topline">
-              <span class="project-type">SAAS / FULL-STACK</span>
-              <span class="project-status status-live"><i></i> مباشر</span>
-            </div>
-            <h3>دَرب فلو <span>DarbFlow</span></h3>
-            <p>نظام متكامل لإدارة شركات تأجير السيارات من شاشة واحدة: السيارات، الحجوزات، العقود، المدفوعات، المصروفات، الصيانة، الفروع، التقارير وبوابة العميل.</p>
-            <div class="project-tags"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>SaaS</span></div>
-            <div class="project-actions">
-              <a class="project-link project-link-darbflow" href="https://darbflow.up.railway.app" target="_blank" rel="noopener noreferrer">
-                <span class="project-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-                <span class="project-link-text">فتح موقع DarbFlow</span>
-              </a>
-            </div>
-          </div>
-          <div class="project-visual project-logo-visual pv-darbflow">
-            <div class="logo-plate logo-plate-light">
-              <img src="darbflow-logo.png" alt="شعار DarbFlow" class="project-logo-img darbflow-logo" />
-            </div>
-            <div class="visual-meta">
-              <span>SMART RENTAL MANAGEMENT</span>
-              <small>منصة لإدارة التأجير باحتراف</small>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card project-game spotlight-card reveal reveal-up">
-          <div class="project-index">02</div>
-          <div class="project-copy">
-            <div class="project-topline">
-              <span class="project-type">GAME / WEB & ANDROID</span>
-              <span class="project-status status-live"><i></i> مباشر</span>
-            </div>
-            <h3>من سوّاها؟</h3>
-            <p>لعبة اجتماعية خليجية للجلسات والأصدقاء، فيها أنماط لعب مختلفة وتجربة أونلاين وأوفلاين، غرف، تصويت وتفاعل بين اللاعبين.</p>
-            <div class="project-tags"><span>Flutter</span><span>Firebase</span><span>Realtime</span><span>Game UI</span></div>
-            <div class="project-actions">
-              <a class="project-link project-link-game" href="https://man-sawwaha.web.app" target="_blank" rel="noopener noreferrer">
-                <span class="project-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-                <span class="project-link-text">العب من سوّاها؟</span>
-              </a>
-            </div>
-          </div>
-          <div class="project-visual project-logo-visual pv-game">
-            <div class="logo-plate logo-plate-soft">
-              <img src="man-sawwaha-logo.png" alt="شعار من سوّاها" class="project-logo-img game-logo" />
-            </div>
-            <div class="visual-meta">
-              <span>SOCIAL PARTY GAME</span>
-              <small>السالفة تبدأ هنا… والضحك عليكم</small>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card project-portfolio spotlight-card reveal reveal-up">
-          <div class="project-index">03</div>
-          <div class="project-copy">
-            <div class="project-topline">
-              <span class="project-type">WEB / PERSONAL BRAND</span>
-              <span class="project-status status-live"><i></i> أنت هنا</span>
-            </div>
-            <h3>الموقع الشخصي</h3>
-            <p>مساحتي الرقمية لعرض مشاريعي ومهاراتي. تصميم متجاوب بوضع فاتح وغامق، حركات هادئة وتجربة مناسبة للجوال والكمبيوتر مع عرض واضح للمشاريع الحالية.</p>
-            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
-            <div class="project-actions">
-              <a class="project-link project-link-neutral" href="#top">
-                <span class="project-link-icon" aria-hidden="true">↑</span>
-                <span class="project-link-text">رجوع لأعلى الصفحة</span>
-              </a>
-            </div>
-          </div>
-          <div class="project-visual pv-portfolio portfolio-visual">
-            <div class="portfolio-window">
-              <span class="portfolio-pill">ALWI.AS</span>
-              <div class="portfolio-lines">
-                <i></i><i></i><i></i>
-              </div>
-              <strong>AS.</strong>
-              <small>Design • Frontend • Identity</small>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section shell now-section" id="now">
-      <div class="section-heading reveal reveal-left">
-        <span class="section-no">04</span>
-        <div>
-          <p>حالياً أعمل على</p>
-          <h2>الأشياء اللي أركز عليها الآن في مشاريعي.</h2>
-        </div>
-      </div>
-
-      <div class="now-grid">
-        <article class="now-card spotlight-card reveal reveal-up">
-          <div class="now-icon">DF</div>
-          <h3>تطوير DarbFlow</h3>
-          <p>أحسن التجربة البصرية، وأضيف مزايا أقوى لإدارة شركات تأجير السيارات بشكل عملي واحترافي.</p>
-        </article>
-        <article class="now-card spotlight-card reveal reveal-up reveal-delay-1">
-          <div class="now-icon">؟</div>
-          <h3>تحسين من سوّاها؟</h3>
-          <p>أطوّر تدفق اللعب، الأونلاين، والتفاعل بين اللاعبين عشان تصير التجربة أمتع وأوضح.</p>
-        </article>
-        <article class="now-card spotlight-card reveal reveal-up reveal-delay-2">
-          <div class="now-icon">UI</div>
-          <h3>رفع مستوى الواجهة</h3>
-          <p>أشتغل على تفاصيل التصميم، الحركة، والأداء عشان كل مشروع يطلع فخم من أول نظرة.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section shell contact-section" id="contact">
-      <div class="contact-panel spotlight-card reveal reveal-scale">
-        <div class="contact-copy">
-          <span class="section-no">05</span>
-          <p class="contact-kicker">تواصل</p>
-          <h2>عندك فكرة؟<br><span>خلّنا نبنيها.</span></h2>
-          <p>إذا عندك مشروع، فكرة أو تبغى نتكلم عن شي تقني، تقدر تتواصل معي مباشرة.</p>
-        </div>
-
-        <div class="contact-actions">
-          <a class="contact-link" href="https://wa.me/96890120924" target="_blank" rel="noopener noreferrer">
-            <span class="contact-icon">WA</span>
-            <span><small>واتساب</small><strong dir="ltr">+968 9012 0924</strong></span>
-            <b>↗</b>
-          </a>
-          <a class="contact-link" href="mailto:alsgab115@gmail.com?subject=استفسار">
-            <span class="contact-icon">@</span>
-            <span><small>البريد الإلكتروني</small><strong dir="ltr">alsgab115@gmail.com</strong></span>
-            <b>↗</b>
-          </a>
-          <div class="contact-link location-link">
-            <span class="contact-icon">⌖</span>
-            <span><small>الموقع</small><strong>صلالة، ظفار، سلطنة عُمان</strong></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="social-row reveal reveal-up">
-        <span>تابعني</span>
-        <div class="social-links">
-          <a href="https://www.instagram.com/alwi_alsggaf/?__pwa=1" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="instagram (1).png" alt="" /> Instagram</a>
-          <a href="https://x.com/alsggaf18143" target="_blank" rel="noopener noreferrer" aria-label="X"><img src="twitter.png" alt="" /> X</a>
-          <a href="https://github.com/alwi115" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="github.png" alt="" /> GitHub</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer shell">
-    <p>© <span id="year"></span> علوي السقاف. صُممت بعناية.</p>
-    <div class="footer-links">
-      <a href="#projects">المشاريع</a>
-      <a href="#top">رجوع للأعلى ↑</a>
-    </div>
-  </footer>
-
-  <script src="script.js?v=7.0.0"></script>
+<script src="script.js?v=8.0.0"></script>
 </body>
 </html>
