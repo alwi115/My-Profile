@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#070b14" />
-  <meta name="description" content="الصفحة الشخصية لعلوي عبدالرحمن السقاف — مهتم بالبرمجة، تصميم الويب وصناعة التجارب الرقمية." />
+  <meta name="description" content="الصفحة الشخصية لعلوي عبدالرحمن السقاف — مشاريع برمجية، تصميم واجهات وتجارب رقمية." />
+  <meta name="color-scheme" content="dark light" />
   <title>علوي السقاف | Portfolio</title>
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem('alwi-theme');
+        const preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.dataset.theme = saved || preferred;
+      } catch (_) {}
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,6 +23,7 @@
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"></div>
+
   <div class="ambient" aria-hidden="true">
     <span class="orb orb-one"></span>
     <span class="orb orb-two"></span>
@@ -26,13 +37,9 @@
         <span class="brand-mark">A</span>
         <span class="brand-copy">
           <strong>علوي السقاف</strong>
-          <small>Portfolio</small>
+          <small>PORTFOLIO</small>
         </span>
       </a>
-
-      <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-links">
-        <span></span><span></span>
-      </button>
 
       <div class="nav-links" id="nav-links">
         <a href="#about">نبذة</a>
@@ -41,30 +48,45 @@
         <a href="#contact">تواصل</a>
       </div>
 
-      <a class="nav-cta" href="#contact">خلّنا نتواصل</a>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="تغيير إلى الوضع الفاتح" title="تغيير المظهر">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+          </span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+          </span>
+        </button>
+
+        <a class="nav-cta" href="#contact">خلّنا نتواصل</a>
+
+        <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="hero shell" aria-labelledby="hero-title">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="status-dot"></span> متاح للتعلم وصناعة مشاريع جديدة</div>
+        <div class="eyebrow"><span class="status-dot"></span> أبني وأطوّر مشاريع رقمية حقيقية</div>
         <p class="hero-kicker">مرحبًا، أنا</p>
         <h1 id="hero-title">علوي عبدالرحمن <span>السقاف</span></h1>
-        <p class="hero-lead">أحب البرمجة والتقنية الحديثة، وأحوّل الأفكار البسيطة إلى تجارب رقمية مرتبة، واضحة، ولها حضور.</p>
+        <p class="hero-lead">مهتم بالبرمجة وتصميم الواجهات وصناعة المنتجات الرقمية. أحوّل الفكرة من مجرد تصور إلى مشروع يعمل على أرض الواقع — من أنظمة الويب إلى الألعاب.</p>
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">
-            <span>شوف مشاريعي</span>
+            <span>استكشف مشاريعي</span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <a class="btn btn-ghost" href="#contact">تواصل معي</a>
         </div>
 
         <div class="hero-meta" aria-label="ملخص سريع">
-          <div><strong>04+</strong><span>مشاريع منجزة</span></div>
-          <div><strong>Web</strong><span>اهتمام رئيسي</span></div>
-          <div><strong>∞</strong><span>تعلّم مستمر</span></div>
+          <div><strong>04+</strong><span>مشاريع فعلية</span></div>
+          <div><strong>Web</strong><span>تطوير وواجهات</span></div>
+          <div><strong>Game</strong><span>ألعاب وتجارب</span></div>
         </div>
       </div>
 
@@ -73,18 +95,18 @@
         <div class="portrait-card spotlight-card">
           <div class="portrait-topline">
             <span>ALWI.AS</span>
-            <span class="live-label"><i></i> ONLINE</span>
+            <span class="live-label"><i></i> BUILDING</span>
           </div>
           <div class="portrait-wrap">
             <img src="my photo.jpg" alt="صورة علوي عبدالرحمن السقاف" />
             <div class="portrait-shade"></div>
           </div>
           <div class="portrait-caption">
-            <div><small>التركيز الحالي</small><strong>Web & Technology</strong></div>
+            <div><small>التركيز الحالي</small><strong>Web • Apps • Games</strong></div>
             <span class="arrow-badge">↗</span>
           </div>
         </div>
-        <div class="float-chip chip-code">&lt;/&gt; WEB</div>
+        <div class="float-chip chip-code">&lt;/&gt; BUILD</div>
         <div class="float-chip chip-create">✦ CREATE</div>
       </div>
 
@@ -96,27 +118,27 @@
         <span class="section-no">01</span>
         <div>
           <p>عنّي</p>
-          <h2>شغف بالتقنية، واهتمام بالتفاصيل.</h2>
+          <h2>أتعلم بالبناء، وأطوّر الفكرة لين تصير منتج.</h2>
         </div>
       </div>
 
       <div class="about-grid">
         <article class="about-main glass-card spotlight-card reveal">
-          <p class="big-copy">أستمتع بتعلّم لغات البرمجة وتصميم المواقع، وأسعى دائمًا لتطوير مهاراتي وبناء مشاريع مبتكرة تعبّر عن شغفي.</p>
+          <p class="big-copy">أحب أشتغل على مشاريع لها استخدام حقيقي، وأجرّب تقنيات جديدة بدل ما أكتفي بالتعلّم النظري. أكثر شي يشدّني هو تطوير الويب، تصميم الواجهات، الأنظمة، والألعاب.</p>
           <div class="quote-line">
             <span>“</span>
-            <p>أؤمن بأن التعلّم المستمر هو أقصر طريق لبناء شيء أفضل كل مرة.</p>
+            <p>كل مشروع بالنسبة لي فرصة أتعلم شي جديد وأطلع بنتيجة أحسن من اللي قبلها.</p>
           </div>
         </article>
 
         <aside class="about-side reveal reveal-delay-1">
           <div class="mini-card">
             <span>المجال</span>
-            <strong>تقنية وبرمجة</strong>
+            <strong>برمجة وتقنية</strong>
           </div>
           <div class="mini-card">
-            <span>الاهتمام</span>
-            <strong>تصميم المواقع</strong>
+            <span>التركيز</span>
+            <strong>منتجات رقمية</strong>
           </div>
           <div class="mini-card">
             <span>الموقع</span>
@@ -130,104 +152,160 @@
       <div class="section-heading reveal">
         <span class="section-no">02</span>
         <div>
-          <p>المهارات</p>
-          <h2>أدوات أستخدمها، ومهارات أبني عليها.</h2>
+          <p>المهارات والتقنيات</p>
+          <h2>الأدوات اللي أستخدمها في مشاريعي الحالية.</h2>
         </div>
       </div>
 
       <div class="skills-grid">
         <article class="skill-card spotlight-card reveal">
           <div class="skill-icon">01</div>
-          <h3>الحاسوب والأعمال المكتبية</h3>
-          <p>استخدام الحاسوب والبرامج المكتبية، وتنظيم البيانات والحسابات اليومية بدقة.</p>
-          <div class="tags"><span>Computer</span><span>Organization</span></div>
+          <h3>تطوير الواجهات</h3>
+          <p>بناء واجهات متجاوبة للجوال والكمبيوتر مع اهتمام بالحركة، سهولة الاستخدام والتفاصيل البصرية.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
         </article>
 
         <article class="skill-card spotlight-card reveal reveal-delay-1">
           <div class="skill-icon">02</div>
-          <h3>Excel و Access</h3>
-          <p>إنشاء الجداول وإدارتها في Excel، مع خبرة أساسية في Access وتنفيذ مشاريع بسيطة.</p>
-          <div class="tags"><span>Excel</span><span>Access</span></div>
+          <h3>تطوير الأنظمة</h3>
+          <p>بناء منطق الأنظمة والـ APIs وربط الصلاحيات والبيانات والعمليات اليومية داخل المشروع.</p>
+          <div class="tags"><span>Node.js</span><span>Express</span><span>REST API</span></div>
         </article>
 
         <article class="skill-card spotlight-card reveal reveal-delay-2">
           <div class="skill-icon">03</div>
-          <h3>العروض والفواتير</h3>
-          <p>إعداد عروض تقديمية مرتبة وتصميم فواتير منظمة وواضحة للاستخدام العملي.</p>
-          <div class="tags"><span>PowerPoint</span><span>Documents</span></div>
+          <h3>قواعد البيانات</h3>
+          <p>تصميم وربط البيانات للمشاريع العملية ومتابعة العلاقات والعمليات بشكل منظم.</p>
+          <div class="tags"><span>MongoDB</span><span>Mongoose</span><span>Firebase</span></div>
         </article>
 
         <article class="skill-card spotlight-card reveal">
           <div class="skill-icon">04</div>
-          <h3>المونتاج وصناعة المحتوى</h3>
-          <p>إنتاج فيديوهات قصيرة وتنسيق المحتوى البصري بأسلوب مناسب للفكرة والجمهور.</p>
-          <div class="tags"><span>Video</span><span>Content</span></div>
+          <h3>تطبيقات وألعاب</h3>
+          <p>تطوير تجارب تفاعلية ومشاريع موبايل وألعاب، مع اهتمام بالتدفق وسهولة اللعب.</p>
+          <div class="tags"><span>Flutter</span><span>Firebase</span><span>UE5</span></div>
         </article>
 
         <article class="skill-card spotlight-card reveal reveal-delay-1">
           <div class="skill-icon">05</div>
-          <h3>التنظيم والدقة</h3>
-          <p>اهتمام بالتفاصيل، تنظيم العمل، وترتيب المهام للوصول لنتيجة أنظف وأوضح.</p>
-          <div class="tags"><span>Focus</span><span>Details</span></div>
+          <h3>UI / UX</h3>
+          <p>إعادة تصميم الصفحات، تنظيم المحتوى، وتحسين تجربة المستخدم لتكون أوضح وأفخم.</p>
+          <div class="tags"><span>Responsive</span><span>UI</span><span>Motion</span></div>
         </article>
 
         <article class="skill-card spotlight-card reveal reveal-delay-2">
           <div class="skill-icon">06</div>
-          <h3>العمل الجماعي</h3>
-          <p>القدرة على العمل ضمن فريق والتواصل بوضوح للوصول للنتيجة المطلوبة.</p>
-          <div class="tags"><span>Teamwork</span><span>Communication</span></div>
+          <h3>النشر وإدارة الكود</h3>
+          <p>رفع المشاريع وإدارة التحديثات وتجهيزها للنشر على خدمات الاستضافة والبناء.</p>
+          <div class="tags"><span>GitHub</span><span>Railway</span><span>Codemagic</span></div>
         </article>
       </div>
     </section>
 
     <section class="section shell" id="projects">
-      <div class="section-heading reveal">
+      <div class="section-heading projects-heading reveal">
         <span class="section-no">03</span>
         <div>
-          <p>المشاريع</p>
-          <h2>أعمال نفّذتها وخلّتني أتعلّم أكثر.</h2>
+          <p>المشاريع الحالية</p>
+          <h2>أفكار بدأت من الصفر وصارت مشاريع حقيقية.</h2>
         </div>
+      </div>
+
+      <div class="project-summary reveal">
+        <span><i class="summary-dot live"></i> مشاريع منشورة</span>
+        <span><i class="summary-dot building"></i> مشاريع قيد التطوير</span>
+        <strong>2026</strong>
       </div>
 
       <div class="projects-list">
         <article class="project-card project-featured spotlight-card reveal">
           <div class="project-index">01</div>
           <div class="project-copy">
-            <span class="project-type">WEB / PERSONAL</span>
-            <h3>الموقع الشخصي</h3>
-            <p>مساحة رقمية شخصية أعرض فيها مهاراتي ومشاريعي ومعلومات التواصل بتجربة حديثة ومتجاوبة.</p>
+            <div class="project-topline">
+              <span class="project-type">SAAS / FULL-STACK</span>
+              <span class="project-status status-live"><i></i> مباشر</span>
+            </div>
+            <h3>دَرب فلو <span>DarbFlow</span></h3>
+            <p>نظام متكامل لإدارة شركات تأجير السيارات من شاشة واحدة: السيارات، الحجوزات، العقود، المدفوعات، المصروفات، الصيانة، الفروع، التقارير وبوابة العميل.</p>
+            <div class="project-tags"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>SaaS</span></div>
+            <div class="project-actions">
+              <a class="project-link primary" href="https://darbflow.up.railway.app" target="_blank" rel="noopener noreferrer">
+                فتح المشروع
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+            </div>
           </div>
-          <div class="project-visual pv-one"><span>PORTFOLIO</span><strong>AS.</strong></div>
+          <div class="project-visual pv-darbflow">
+            <span>DARB FLOW</span>
+            <strong>DF.</strong>
+            <small>Rental Management System</small>
+          </div>
         </article>
 
         <article class="project-card spotlight-card reveal">
           <div class="project-index">02</div>
           <div class="project-copy">
-            <span class="project-type">WEB / COMMERCE</span>
-            <h3>متجر إلكتروني بسيط</h3>
-            <p>تجربة أولية لفهم بناء صفحات المنتجات وترتيب المحتوى وتجربة المستخدم.</p>
+            <div class="project-topline">
+              <span class="project-type">GAME / WEB & ANDROID</span>
+              <span class="project-status status-live"><i></i> مباشر</span>
+            </div>
+            <h3>من سوّاها؟</h3>
+            <p>لعبة اجتماعية خليجية للجلسات والأصدقاء، فيها أنماط لعب مختلفة وتجربة أونلاين وأوفلاين، غرف، تصويت وتفاعل بين اللاعبين.</p>
+            <div class="project-tags"><span>Flutter</span><span>Firebase</span><span>Realtime</span><span>Game UI</span></div>
+            <div class="project-actions">
+              <a class="project-link primary" href="https://man-sawwaha.web.app" target="_blank" rel="noopener noreferrer">
+                العب الآن
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+            </div>
           </div>
-          <div class="project-visual pv-two"><span>STORE</span><strong>+</strong></div>
+          <div class="project-visual pv-game">
+            <span>MAN SAWWAHA?</span>
+            <strong>؟</strong>
+            <small>Social Party Game</small>
+          </div>
         </article>
 
         <article class="project-card spotlight-card reveal">
           <div class="project-index">03</div>
           <div class="project-copy">
-            <span class="project-type">VIDEO / MEDIA</span>
-            <h3>إعلان ترويجي</h3>
-            <p>مونتاج إعلان قصير لشركة محلية مع التركيز على إيقاع العرض ووضوح الرسالة.</p>
+            <div class="project-topline">
+              <span class="project-type">3D FPS / GAME DEVELOPMENT</span>
+              <span class="project-status status-building"><i></i> قيد التطوير</span>
+            </div>
+            <h3>MIRAGE PROTOCOL</h3>
+            <p>مشروع لعبة شوتر ثلاثية الأبعاد بأسلوب واقعي، مبنية على Unreal Engine. العمل الحالي يركز على عالم اللعبة وخريطة MIRAGE HARBOR وتجربة الحركة والقتال.</p>
+            <div class="project-tags"><span>Unreal Engine 5</span><span>3D</span><span>FPS</span><span>World Design</span></div>
+            <div class="project-actions">
+              <span class="project-link disabled" aria-disabled="true">قريبًا</span>
+            </div>
           </div>
-          <div class="project-visual pv-three"><span>MOTION</span><strong>▶</strong></div>
+          <div class="project-visual pv-mirage">
+            <span>MIRAGE PROTOCOL</span>
+            <strong>MP.</strong>
+            <small>MIRAGE HARBOR</small>
+          </div>
         </article>
 
         <article class="project-card spotlight-card reveal">
           <div class="project-index">04</div>
           <div class="project-copy">
-            <span class="project-type">BUSINESS / DESIGN</span>
-            <h3>فواتير رسمية</h3>
-            <p>تصميم فواتير مرتبة لشركة محلية بأسلوب واضح وسهل للاستخدام اليومي.</p>
+            <div class="project-topline">
+              <span class="project-type">WEB / PERSONAL BRAND</span>
+              <span class="project-status status-live"><i></i> أنت هنا</span>
+            </div>
+            <h3>الموقع الشخصي</h3>
+            <p>مساحتي الرقمية لعرض مشاريعي ومهاراتي. تصميم متجاوب بوضع فاتح وغامق، حركات هادئة وتجربة مناسبة للجوال والكمبيوتر.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
+            <div class="project-actions">
+              <a class="project-link ghost" href="#top">استكشف الموقع</a>
+            </div>
           </div>
-          <div class="project-visual pv-four"><span>INVOICE</span><strong>✓</strong></div>
+          <div class="project-visual pv-portfolio">
+            <span>PORTFOLIO</span>
+            <strong>AS.</strong>
+            <small>Personal Experience</small>
+          </div>
         </article>
       </div>
     </section>
@@ -237,8 +315,8 @@
         <div class="contact-copy">
           <span class="section-no">04</span>
           <p class="contact-kicker">تواصل</p>
-          <h2>عندك فكرة؟<br><span>خلّنا نبدأ فيها.</span></h2>
-          <p>تقدر تتواصل معي مباشرة عن طريق الواتساب أو الإيميل، أو تتابعني على حساباتي.</p>
+          <h2>عندك فكرة؟<br><span>خلّنا نبنيها.</span></h2>
+          <p>إذا عندك مشروع، فكرة أو تبغى نتكلم عن شي تقني، تقدر تتواصل معي مباشرة.</p>
         </div>
 
         <div class="contact-actions">
@@ -272,7 +350,10 @@
 
   <footer class="footer shell">
     <p>© <span id="year"></span> علوي السقاف. صُممت بعناية.</p>
-    <a href="#top">رجوع للأعلى ↑</a>
+    <div class="footer-links">
+      <a href="#projects">المشاريع</a>
+      <a href="#top">رجوع للأعلى ↑</a>
+    </div>
   </footer>
 
   <script src="script.js"></script>

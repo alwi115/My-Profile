@@ -1,10 +1,31 @@
+const root = document.documentElement;
 const header = document.querySelector('.site-header');
 const progress = document.querySelector('.scroll-progress');
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const navAnchors = [...document.querySelectorAll('.nav-links a')];
 const sections = [...document.querySelectorAll('main section[id]')];
+const themeToggle = document.querySelector('.theme-toggle');
+const themeMeta = document.querySelector('meta[name="theme-color"]');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function applyTheme(theme, persist = false) {
+  root.dataset.theme = theme;
+  const isLight = theme === 'light';
+  themeToggle?.setAttribute('aria-label', isLight ? 'تغيير إلى الوضع الغامق' : 'تغيير إلى الوضع الفاتح');
+  themeToggle?.setAttribute('title', isLight ? 'الوضع الغامق' : 'الوضع الفاتح');
+  themeMeta?.setAttribute('content', isLight ? '#f3f7fb' : '#070b14');
+
+  if (persist) {
+    try { localStorage.setItem('alwi-theme', theme); } catch (_) {}
+  }
+}
+
+applyTheme(root.dataset.theme || 'dark');
+
+themeToggle?.addEventListener('click', () => {
+  applyTheme(root.dataset.theme === 'light' ? 'dark' : 'light', true);
+});
 
 function updateScrollUI() {
   const y = window.scrollY;
@@ -24,6 +45,13 @@ function updateScrollUI() {
 updateScrollUI();
 window.addEventListener('scroll', updateScrollUI, { passive: true });
 
+function closeMenu() {
+  navLinks?.classList.remove('open');
+  menuToggle?.classList.remove('active');
+  menuToggle?.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('menu-open');
+}
+
 menuToggle?.addEventListener('click', () => {
   const open = !navLinks.classList.contains('open');
   navLinks.classList.toggle('open', open);
@@ -32,20 +60,16 @@ menuToggle?.addEventListener('click', () => {
   document.body.classList.toggle('menu-open', open);
 });
 
-navAnchors.forEach(link => link.addEventListener('click', () => {
-  navLinks.classList.remove('open');
-  menuToggle?.classList.remove('active');
-  menuToggle?.setAttribute('aria-expanded', 'false');
-  document.body.classList.remove('menu-open');
-}));
+navAnchors.forEach(link => link.addEventListener('click', closeMenu));
 
 document.addEventListener('click', event => {
   if (!navLinks?.classList.contains('open')) return;
   if (navLinks.contains(event.target) || menuToggle?.contains(event.target)) return;
-  navLinks.classList.remove('open');
-  menuToggle?.classList.remove('active');
-  menuToggle?.setAttribute('aria-expanded', 'false');
-  document.body.classList.remove('menu-open');
+  closeMenu();
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeMenu();
 });
 
 const revealItems = document.querySelectorAll('.reveal');
@@ -57,7 +81,7 @@ if ('IntersectionObserver' in window && !reducedMotion) {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.13, rootMargin: '0px 0px -30px' });
+  }, { threshold: 0.12, rootMargin: '0px 0px -30px' });
   revealItems.forEach(item => observer.observe(item));
 } else {
   revealItems.forEach(item => item.classList.add('in-view'));
@@ -68,8 +92,8 @@ if (!reducedMotion && window.matchMedia('(pointer: fine)').matches) {
   document.addEventListener('pointermove', event => {
     if (raf) return;
     raf = requestAnimationFrame(() => {
-      document.documentElement.style.setProperty('--mouse-x', `${(event.clientX / innerWidth) * 100}%`);
-      document.documentElement.style.setProperty('--mouse-y', `${(event.clientY / innerHeight) * 100}%`);
+      root.style.setProperty('--mouse-x', `${(event.clientX / innerWidth) * 100}%`);
+      root.style.setProperty('--mouse-y', `${(event.clientY / innerHeight) * 100}%`);
       raf = null;
     });
   }, { passive: true });
@@ -83,4 +107,5 @@ if (!reducedMotion && window.matchMedia('(pointer: fine)').matches) {
   });
 }
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
