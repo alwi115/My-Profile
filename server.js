@@ -48,7 +48,9 @@ const server = http.createServer((req, res) => {
         if (err.code === 'ENOENT') {
           fs.readFile(path.join(ROOT, 'index.html'), (indexErr, indexData) => {
             if (indexErr) return res.writeHead(404).end('Not Found');
-            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-cache' });
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+              'Pragma': 'no-cache',
+              'Expires': '0' });
             res.end(indexData);
           });
           return;
@@ -60,7 +62,9 @@ const server = http.createServer((req, res) => {
       const ext = path.extname(filePath).toLowerCase();
       const headers = {
         'Content-Type': types[ext] || 'application/octet-stream',
-        'Cache-Control': ext === '.html' ? 'no-cache' : 'public, max-age=86400'
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
       };
       res.writeHead(200, headers);
       res.end(data);

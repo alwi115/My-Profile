@@ -7,6 +7,8 @@ const navAnchors = [...document.querySelectorAll('.nav-links a')];
 const sections = [...document.querySelectorAll('main section[id]')];
 const themeToggle = document.querySelector('.theme-toggle');
 const themeMeta = document.querySelector('meta[name="theme-color"]');
+const themeGlyph = document.querySelector('.theme-glyph');
+const themeLabel = document.querySelector('.theme-label');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function applyTheme(theme, persist = false) {
@@ -15,6 +17,8 @@ function applyTheme(theme, persist = false) {
   themeToggle?.setAttribute('aria-label', isLight ? 'تغيير إلى الوضع الغامق' : 'تغيير إلى الوضع الفاتح');
   themeToggle?.setAttribute('title', isLight ? 'الوضع الغامق' : 'الوضع الفاتح');
   themeMeta?.setAttribute('content', isLight ? '#f3f7fb' : '#070b14');
+  if (themeGlyph) themeGlyph.textContent = isLight ? '☾' : '☀';
+  if (themeLabel) themeLabel.textContent = isLight ? 'غامق' : 'فاتح';
 
   if (persist) {
     try { localStorage.setItem('alwi-theme', theme); } catch (_) {}
